@@ -209,7 +209,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.1s ease-in-out;
     z-index: 1;
     opacity: 0;
   }
@@ -294,7 +294,7 @@
 
   .hero1 {
     background-image: linear-gradient(90deg, rgb(0, 0, 0) 30%, rgba(0, 128, 255, 0.6) 90%),
-    url('https://coppe.ufrj.br/wp-content/uploads/2023/06/img-potencial-mercado-dados-informacoes-redes-telecomunicacoes.jpg');
+    url('//IMAGENES/img-potencial-mercado-dados-informacoes-redes-telecomunicacoes.jpg');
     background-repeat: no-repeat  ;
     background-size: cover;
     padding: 4rem 1rem;
@@ -498,7 +498,7 @@
       rgba(0, 0, 0, 0.664)  80%, 
       rgba(0, 0, 0, 0.281) 100%
     ),
-    url('https://images.unsplash.com/photo-1594915854088-2128db6a8db5?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    url('/IMAGENES/photo-1594915854088-2128db6a8db5.avif');
   background-size: cover;
   background-position: center;
     color: white; 
@@ -1075,7 +1075,7 @@
   /* Contact Section */
   .contact {
     background-image: 
-    url('https://images.unsplash.com/photo-1526666923127-b2970f64b422?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D');
+    url('/IMAGENES/photo-1526666923127-b2970f64b422.jfif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center ;

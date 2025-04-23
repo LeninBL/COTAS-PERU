@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const bg2 = document.querySelector('.hero-bg2');
   
   function cambiarFondo() {
-    const nextImage = `linear-gradient(rgba(140, 154, 216, 0.03), rgba(10, 0, 104, 0.22)), url('${images[index]}')`;
+    const nextImage = `url('${images[index]}')`;
     
     if (showingBg1) {
       bg2.style.backgroundImage = nextImage;
