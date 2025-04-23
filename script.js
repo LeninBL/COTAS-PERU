@@ -175,11 +175,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   const images = [
-    'https://datascientest.com/es/files/2024/05/Redes_y_telecomunicaciones_datascientest.jpg',
-    'https://e1.pxfuel.com/desktop-wallpaper/519/891/desktop-wallpaper-telecomunications-radar.jpg',
-    'https://www.soditel.com/wp-content/uploads/2020/02/datacenter.jpg',
-    'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1528499908559-b8e4e8b89bda?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    '/IMAGENES/desktop-wallpaper-telecomunications-radar.jpg',
+    '/IMAGENES/datacenter.jpg',
+    '/IMAGENES/photo-1446776653964-20c1d3a81b06.avif',
+    '/IMAGENES/photo-1528499908559-b8e4e8b89bda.avif',
+    '/IMAGENES/pngtree-telecom-tower-close(3).jpg'
 
     ];
   
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const bg2 = document.querySelector('.hero-bg2');
   
   function cambiarFondo() {
-    const nextImage = `linear-gradient(rgba(0, 22, 146, 0.12), rgba(10, 0, 104, 0.22)), url('${images[index]}')`;
+    const nextImage = `linear-gradient(rgba(140, 154, 216, 0.03), rgba(10, 0, 104, 0.22)), url('${images[index]}')`;
     
     if (showingBg1) {
       bg2.style.backgroundImage = nextImage;
