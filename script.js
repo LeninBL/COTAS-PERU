@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     index = (index + 1) % images.length;
   }
   
-  setInterval(cambiarFondo, 3000);
+  setInterval(cambiarFondo, 2500);
   
   
   
