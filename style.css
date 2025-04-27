@@ -1409,13 +1409,15 @@
   
   /* Contact Section */
   .contact {
-    background-image: 
-    url('/IMAGENES/photo-1526666923127-b2970f64b422.jfif');
+    background-image: url('/IMAGENES/photo-1526666923127-b2970f64b422.jfif');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center ;
+    background-position: center;
+    position: relative;
 
+    background-attachment: fixed; /* Esto hace que el fondo se quede fijo mientras se hace scroll */
   }
+  
 
 
   .title-contact {
@@ -1679,6 +1681,7 @@
   
   /* Responsive Design */
 
+  
   @media (max-width: 1070px) {
     .main-header {
       flex-direction: row;
@@ -1692,10 +1695,10 @@
     
     .main-nav {
       position: fixed;
-      top: 160px;
+      top: 13%;
       left: -100%;
       width: 100%;
-      height: calc(70vh - 76px);
+      height: 100%;
       background: linear-gradient(135deg, #07162b, #000000);
       flex-direction: column;
       align-items: center;
@@ -1776,10 +1779,6 @@
 
 
   }
-
-
-  
- 
 
 
   @media (max-width: 768px) {
