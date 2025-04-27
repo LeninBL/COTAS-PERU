@@ -118,43 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadProducts('switches');
     
 
-
-    
-
-    
-
-
-
-
-
-
-
-    
-    // Observador de intersección para las secciones
-    const observerOptions = {
-      threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          const correspondingLink = document.querySelector(`.nav-link[href="#${id}"]`);
-          
-          navLinks.forEach(link => link.classList.remove('active'));
-          if (correspondingLink) {
-            correspondingLink.classList.add('active');
-          }
-          
-          const header = document.querySelector('.main-header');
-          header.className = `main-header ${id} scrolled`;
-        }
-      });
-    }, observerOptions);
-    
-    sections.forEach(section => {
-      observer.observe(section);
-    });
     
     
     // Formulario de contacto
@@ -180,18 +143,17 @@ document.addEventListener('DOMContentLoaded', function() {
     '/IMAGENES/photo-1446776653964-20c1d3a81b06.avif',
     '/IMAGENES/photo-1528499908559-b8e4e8b89bda.avif',
     '/IMAGENES/pngtree-telecom-tower-close(3).jpg'
+  ];
 
-    ];
-  
   let index = 1;
   let showingBg1 = true;
-  
+
   const bg1 = document.querySelector('.hero-bg1');
   const bg2 = document.querySelector('.hero-bg2');
-  
+
   function cambiarFondo() {
     const nextImage = `url('${images[index]}')`;
-    
+
     if (showingBg1) {
       bg2.style.backgroundImage = nextImage;
       bg2.style.opacity = 1;
@@ -201,12 +163,66 @@ document.addEventListener('DOMContentLoaded', function() {
       bg1.style.opacity = 1;
       bg2.style.opacity = 0;
     }
-  
+
     showingBg1 = !showingBg1;
     index = (index + 1) % images.length;
   }
+  const heroSection = document.querySelector('.hero');
+
   
-  setInterval(cambiarFondo, 2500);
+  
+
+
   
   
-  
+
+
+
+
+
+
+const accordion1Items = document.querySelectorAll('.accordion1-item');
+
+accordion1Items.forEach(item => {
+    const button = item.querySelector('.accordion1-button');
+    
+    button.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Cerrar todos los acordeones primero
+        accordion1Items.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.accordion1-content').style.maxHeight = null;
+        });
+        
+        // Abrir el acordeón clickeado si no estaba activo
+        if (!isActive) {
+            item.classList.add('active');
+            const content = item.querySelector('.accordion1-content');
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+});
+
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-card').forEach(card => {
+  observer1.observe(card);
+});
+
+
+const heroObserver = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    setInterval(cambiarFondo, 2500);
+    heroObserver.disconnect();
+  }
+});
+
+heroObserver.observe(heroSection);

@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COTAS PERÚ S.A.C. - cotas perú s.a.c.</title>
+  <title>COTAS PERÚ-Nosotros</title>
+  <link rel="icon" href="IMAGENES/ICONO.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  
+
+
 </head>
 <body>
   <!-- Encabezado -->
@@ -24,6 +30,8 @@
         <li class="nav-item"><a href="/products.html" class="nav-link">Productos</a></li>
         <li class="nav-item"><a href="/support.html" class="nav-link">Soporte</a></li>
         <li class="nav-item"><a href="/contact.html" class="nav-link">Contacto</a></li>
+        <li class="nav-item"><a href="/acces.html" class="nav-link" target="_blank">Acceso</a></li>
+        
       </ul>
     </nav>
     <button class="menu-toggle" aria-label="Toggle menu">
@@ -31,57 +39,208 @@
     </button>
   </header>
 
+  
   <!-- Contenido principal -->
-  <main>
-    
+  <main class="main-about">
+   
     <!-- Sección Nosotros -->
     <section id="nosotros" class="section about">
-      <div class="section-container">
-        <h2 class="section-title">Quiénes Somos</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <div class="mission">
-              <h3><i class="bi bi-stars"></i> Misión</h3>
-              <p>Proporcionar soluciones de red  innovadoras y confiables que impulsen la productividad y conectividad de nuestros clientes.</p>
-            </div>
-            <div class="vision">
-              <h3><i class="bi bi-eye"></i> Visión</h3>
-              <p>Ser líderes en implementación de infraestructura de red en la región, reconocidos por nuestra excelencia técnica y servicio.</p>
-            </div>
-            <div class="values">
-              <h3><i class="bi bi-award"></i> Valores</h3>
-              <ul>
-                <li>Integridad técnica</li>
-                <li>Innovación constante</li>
-                <li>Orientación al cliente</li>
-                <li>Excelencia operativa</li>
-              </ul>
-            </div>
-          </div>
-          <div class="about-experience">
-            <h3><i class="bi bi-clock-history"></i> Nuestra Experiencia</h3>
-            <p>Con más de 15 años en el sector de telecomunicaciones, hemos implementado soluciones  para:</p>
-            <ul>
-              <li>+200 empresas medianas</li>
-              <li>50 instituciones educativas</li>
-              <li>30 centros médicos</li>
-              <li>15 entidades gubernamentales</li>
-            </ul>
-            
-            <div class="certifications">
-              <h4>Certificaciones y Alianzas</h4>
-              <div class="cert-logos">
-                <img src="IMAGENES/cisco-partner.png" alt="Cisco Partner">
-                <img src="IMAGENES/hp-partner.png" alt="HP Partner">
-                <img src="IMAGENES/comptia.png" alt="CompTIA">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="section-container">
+            <!-- Quiénes Somos con imagen -->
+            <section class="nosotros-section grid-section">
+                <div class="text-content">
+                    <h2 class="nosotros-title"><span class="icon">🏢</span> Quiénes Somos</h2>
+                    <p class="nosotros-content">COTAS Perú S.A.C. es una empresa peruana de telecomunicaciones dedicada a ofrecer soluciones innovadoras en conectividad, transmisión de datos, telefonía e internet para hogares y empresas. Nos impulsa el compromiso con el desarrollo digital del país y la excelencia en el servicio al cliente.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Equipo de telecomunicaciones" class="section-image animate-float">
+                </div>
+            </section>
 
-  </main>
+            <!-- Misión y Visión lado a lado -->
+            <div class="dual-column">
+                <section class="nosotros-section mission-vision">
+                    <div class="icon-container">
+                        <span class="icon">🎯</span>
+                    </div>
+                    <h2 class="nosotros-title">Misión</h2>
+                    <p class="nosotros-content content-mv">Brindar servicios de telecomunicaciones confiables, accesibles y de alta calidad, que conecten personas, empresas y comunidades en todo el Perú.</p>
+                </section>
+
+                <section class="nosotros-section mission-vision">
+                    <div class="icon-container">
+                        <span class="icon">👁️</span>
+                    </div>
+                    <h2 class="nosotros-title">Visión</h2>
+                    <p class="nosotros-content content-mv">Ser líderes en soluciones tecnológicas de telecomunicación en el mercado peruano, impulsando la transformación digital y la inclusión tecnológica a nivel nacional.</p>
+                </section>
+            </div>
+
+            <!-- Valores con cards animadas -->
+            <section class="nosotros-section valores-section">
+                <h2 class="nosotros-title centered-title-about"><span class="icon">💡</span> Nuestros Valores</h2>
+                <div class="valores-grid">
+                    <div class="valor-card animate-card">
+                        <div class="valor-icon">✓</div>
+                        <h3>Compromiso con el cliente</h3>
+                        <p>Priorizamos la satisfacción y necesidades de nuestros usuarios</p>
+                    </div>
+                    <div class="valor-card animate-card">
+                        <div class="valor-icon">⚡</div>
+                        <h3>Innovación tecnológica</h3>
+                        <p>Implementamos las últimas tecnologías en telecomunicaciones</p>
+                    </div>
+                    <div class="valor-card animate-card">
+                        <div class="valor-icon">★</div>
+                        <h3>Calidad de servicio</h3>
+                        <p>Garantizamos estándares de excelencia en todos nuestros servicios</p>
+                    </div>
+                    <div class="valor-card animate-card">
+                        <div class="valor-icon">☀</div>
+                        <h3>Transparencia</h3>
+                        <p>Operamos con honestidad y claridad en todas nuestras acciones</p>
+                    </div>
+                    <div class="valor-card animate-card">
+                        <div class="valor-icon">❤</div>
+                        <h3>Responsabilidad social</h3>
+                        <p>Contribuimos al desarrollo digital de las comunidades</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Historia con línea de tiempo -->
+            <section class="nosotros-section timeline-section">
+                <h2 class="nosotros-title line-title"><span class="icon">📈</span>Logros Relevantes de Nuestra Trayectoria</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h3>Consolidación de la Red de Alta Capacidad Nacional</h3>
+                            <p>Implementación de infraestructura moderna para garantizar cobertura y velocidad</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>Lanzamiento de Servicios 5G </h3>
+                            <p>Ingreso al mercado de tecnologías y conectividad emergentes</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>Alianzas Estratégicas con Plataformas Digitales</h3>
+                            <p>Expansión del portafolio con servicios de entretenimiento y valor agregado</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h3>Transformación Digital de la Experiencia del Cliente</h3>
+                            <p>Automatización de canales, soporte y servicio 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Por qué elegirnos con acordeón -->
+            <section class="nosotros-section elegirnos-section">
+                <div class="grid-section">
+                    <div class="text-content">
+                        <h2 class="nosotros-title"><span class="icon">🤝</span> Por qué elegirnos</h2>
+                        <div class="accordion1">
+                            <div class="accordion1-item">
+                                <button class="accordion1-button">Infraestructura de última generación <span class="accordion1-icon">+</span></button>
+                                <div class="accordion1-content">
+                                    <p>Contamos con la tecnología más avanzada en redes y equipos para garantizar un servicio de calidad.</p>
+                                </div>
+                            </div>
+                            <div class="accordion1-item">
+                                <button class="accordion1-button">Atención personalizada <span class="accordion1-icon">+</span></button>
+                                <div class="accordion1-content">
+                                    <p>Nuestros asesores están capacitados para ofrecer soluciones a medida para cada cliente.</p>
+                                </div>
+                            </div>
+                            <div class="accordion1-item">
+                                <button class="accordion1-button">Cobertura nacional <span class="accordion1-icon">+</span></button>
+                                <div class="accordion1-content">
+                                    <p>Llegamos a las principales ciudades del país y seguimos expandiéndonos.</p>
+                                </div>
+                            </div>
+                            <div class="accordion1-item">
+                                <button class="accordion1-button">Soporte técnico 24/7 <span class="accordion1-icon">+</span></button>
+                                <div class="accordion1-content">
+                                    <p>Nuestro equipo está disponible en todo momento para resolver cualquier incidencia.</p>
+                                </div>
+                            </div>
+                            <div class="accordion1-item">
+                                <button class="accordion1-button">Planes flexibles y competitivos <span class="accordion1-icon">+</span></button>
+                                <div class="accordion1-content">
+                                    <p>Ofrecemos opciones adaptables a diferentes necesidades y presupuestos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Técnicos trabajando" class="section-image animate-zoom">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cobertura con mapa interactivo -->
+            <section class="cobertura-section">
+                <h2 class="centered-title-map"><span class="icon">📍</span> Cobertura Nacional</h2>
+                <div class="expansion-nota">
+                  <p>¿No encuentras tu ciudad? <a href="contact.html">Contáctanos</a> para coordinar servicios.</p>
+                </div>
+                
+                <div class="ciudades-grid">
+                  <!-- Tarjeta 1 -->
+
+                  <div class="ciudad-card" style="--color-ciudad: #00a1ff;">
+                    <div class="card-icon">🏙️</div>
+                    <h3>Junín</h3>
+                    <p>Servicios completos disponibles en toda la región.</p>
+     
+                  </div>
+                  
+                  <!-- Tarjeta 2 -->
+                  <div class="ciudad-card" style="--color-ciudad: #0077cc;">
+                    <div class="card-icon">🏔️</div>
+                    <h3>Huancavelica</h3>
+                    <p>Cobertura en zonas urbanas y rurales.</p>
+
+                    
+                  </div>
+                  
+                  <!-- Tarjeta 3 -->
+                  <div class="ciudad-card" style="--color-ciudad: #0056b3;">
+                    <div class="card-icon">⛏️</div>
+                    <h3>Huánuco</h3>
+                    <p>Atención a comunidades agrícolas.</p>
+   
+                  </div>
+                  
+                  <!-- Tarjeta 4 -->
+                  <div class="ciudad-card" style="--color-ciudad: #003366;">
+                    <div class="card-icon">🏢</div>
+                    <h3>Lima</h3>
+                    <p>En fase de implementación progresiva.</p>
+    
+                  </div>
+                </div>
+                
+
+              </section>
+            
+        </div>
+    </section>
+</main>
+
+
 
   <!-- Footer -->
   <footer class="main-footer">

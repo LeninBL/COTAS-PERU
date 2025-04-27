@@ -66,7 +66,7 @@
   
   .nav-item .nav-link {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 0;
@@ -112,6 +112,7 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+  
   
   /* Button Styles */
   .btn {
@@ -209,7 +210,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
     z-index: 1;
     opacity: 0;
   }
@@ -293,14 +294,31 @@
   }
 
   .hero1 {
-    background-image: linear-gradient(90deg, rgb(0, 0, 0) 30%, rgba(0, 128, 255, 0.6) 90%),
-    url('//IMAGENES/img-potencial-mercado-dados-informacoes-redes-telecomunicacoes.jpg');
-    background-repeat: no-repeat  ;
+    background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.4),   
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('https://w0.peakpx.com/wallpaper/601/750/HD-wallpaper-cielo-s9-blue-celeste-sky-slender.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Esto activa el efecto parallax */
     padding: 4rem 1rem;
-    color: white; 
+    color: white;
+    filter: brightness(1.2) contrast(1.4);  
+    transition: background-position 0.3s ease; /* Suaviza la transición */
   }
-
+  
+  
+  /* Opcional: Suaviza más el fondo al hacer scroll */
+  .hero1 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  
   .hero-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -310,18 +328,16 @@
     margin: 1rem ;
     padding: 0;
     border-radius: 6px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 128, 255, 0.6) 90%);
-
-    
-    
+    background: rgba(25, 25, 27, 0.815) ;
     color: #ffffff;
   }
+  
 
 
   .unified-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    grid-template-rows: repeat(2, auto);   /* 2 filas */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto);   
     gap: 0rem;
   }
   
@@ -352,26 +368,13 @@
 
   }
   
-  @keyframes colorShift {
-    0% {
-      filter: hue-rotate(0deg);
-      transform: scale(1);
-    }
-    50% {
-      filter: hue-rotate(30deg);
-      transform: scale(1.03);
-    }
-    100% {
-      filter: hue-rotate(0deg);
-      transform: scale(1);
-    }
-  }
+
+  
 
 
   .hero-ico img {
     width: 70%;
     padding-top: 2rem;
-    animation: colorShift 2s ease-in-out infinite;
   }
   
   
@@ -404,6 +407,13 @@
   .hero-img {
     max-width: 85%;
     transition: transform 0.3s ease;
+
+  }
+  .lazy1{
+
+    margin-right: 1rem;
+    margin-left: 1rem;
+
   }
 
   
@@ -414,11 +424,13 @@
 
 
   .hero2 {
-    background: linear-gradient(135deg, #07162b, #000000);
+    background: linear-gradient(135deg, #07162b, #1a1a1a);  /* Gradiente más suave para más dinamismo */
     padding: 4rem 2rem;
     color: white;
+    filter: brightness(1.2) contrast(1.24);  /* Aumenta brillo y contraste para que los colores resalten */
   }
   
+
 
 /* Distribución 2x2 con grid responsive */
 .hero-columns {
@@ -428,24 +440,21 @@
   max-width: 1200px;
   margin: auto;
 }
-
-/* Caja de contenido */
 .banner-promocional {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);  /* Hago el fondo un poco más visible */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Aumento la visibilidad del borde */
   padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);  /* Más difuso y fuerte */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(10px);
-  
+  backdrop-filter: blur(12px);  /* Aumento el desenfoque para un efecto más dramático */
 }
-
-
 
 .banner-promocional:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);  /* Efecto de elevación para hacerla interactiva */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);  /* Aumento la sombra al pasar el ratón */
 }
+
+
 
 /* Contenido de texto */
 .banner-content h3 {
@@ -488,38 +497,37 @@
 
 
 
-  .hero3 {
-
-    background-image: 
-    linear-gradient(to right, 
-      rgba(0, 0, 0, 0.281) 0%, 
-      rgba(0, 0, 0, 0.664) 20%, 
-      rgb(0, 0, 0) 50%, 
-      rgba(0, 0, 0, 0.664)  80%, 
-      rgba(0, 0, 0, 0.281) 100%
-    ),
-    url('/IMAGENES/photo-1594915854088-2128db6a8db5.avif');
-  background-size: cover;
-  background-position: center;
-    color: white; 
-    padding: 3rem;
-    text-align: center;
-  }
+    .hero3 {
+      background-image:
+        linear-gradient(to right,
+          rgba(0, 0, 0, 0.15) 0%,
+          /* Baja la opacidad para hacerla más suave */
+          rgba(0, 0, 0, 0.35) 20%,
+          rgba(0, 0, 0, 0.5) 50%,
+          /* Un poco más oscuro en el centro para contraste */
+          rgba(0, 0, 0, 0.35) 80%,
+          rgba(0, 0, 0, 0.15) 100%),
+        url('https://images.unsplash.com/photo-1702478475268-aa8ef54c084e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      
+      color: white;
+      padding: 3rem;
+      text-align: center;
+      filter: brightness(1.2) contrast(1.5);
+      /* Aumenta el brillo y el contraste */
+    }
   
-
-
-
-.hero-promo {
-  background-color: rgba(0, 0, 0, 0.651);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-
-  font-family: 'Segoe UI', sans-serif;
-}
-
+    .hero-promo {
+      background-color: rgba(0, 0, 0, 0.651);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
 .hero-promo h3 {
   font-size: 2rem;
   margin-bottom: 1.2rem;
@@ -541,7 +549,7 @@
 }
 
 .promo-item {
-  background-color: rgba(27, 27, 27, 0.37);
+  background-color: rgba(139, 139, 139, 0.37);
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -587,7 +595,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     transition: transform 0.3s ease;
   }
@@ -603,6 +611,332 @@
   }
   
   
+/* About Section */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.main-about {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/007/761/318/non_2x/telecommunication-tower-with-clear-blue-sky-background-antenna-on-blue-sky-background-radio-and-satellite-pole-communication-technology-free-photo.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.1) contrast(1.1); 
+}
+
+.section-container {
+  padding: 0 2rem;
+}
+
+.nosotros-section,
+.mission-vision,
+.valores-section,
+.cobertura-section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.863);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosotros-section:hover,
+.mission-vision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.nosotros-title,
+.centered-title-map,
+.centered-title-about,
+.line-title {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.nosotros-title .icon,
+.valor-icon {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.nosotros-content{
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  text-align: center;
+}
+
+.grid-section,
+.dual-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  background-color: #1ea8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Valores */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.valor-card {
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  background-color: rgba(30, 168, 255, 0.1);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-top: 3px solid #ffffff;
+}
+
+.valor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(30, 168, 255, 0.3);
+}
+
+.valor-card h3 {
+  color: #ffffff;
+}
+
+.valor-card p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* Línea de tiempo */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding-left: 100px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgb(165, 165, 165);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #89bfdf;
+  color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.timeline-content {
+  background-color: rgba(30, 168, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 3px solid #ffffff;
+}
+
+.timeline-content h3 {
+  color: rgb(255, 153, 0);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.timeline-content p {
+  color: #ffffff;
+  font-size: medium;
+}
+
+/* Acordeón */
+.accordion1 {
+  margin-top: 1.5rem;
+}
+
+.accordion1-item {
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion1-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  background-color: #101d2b;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.accordion1-button:hover {
+  background-color: #27476b;
+}
+
+.accordion1-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  color: #b1b0c0;
+}
+
+.accordion1-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: rgba(11, 26, 44, 0.5);
+}
+
+.accordion1-content p {
+  padding: 1rem 1.5rem;
+  margin: 0;
+  color: #ffffff;
+  background-color: rgba(30, 168, 255, 0.1);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.accordion1-item.active .accordion1-icon {
+  transform: rotate(45deg);
+}
+
+/* Cobertura - Ciudades */
+.ciudades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ciudad-card {
+  background: rgba(11, 26, 44, 0.75);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  border-top: 4px solid #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ciudad-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+.ciudad-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.ciudad-card p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+.expansion-nota {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #aaa;
+}
+
+.expansion-nota a {
+  color: #1ea8ff;
+  text-decoration: underline;
+}
+
+/* Imágenes */
+.section-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Animaciones */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-zoom {
+  transition: transform 0.3s ease;
+}
+
+.animate-zoom:hover {
+  transform: scale(1.05);
+}
+
+.animate-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-card:nth-child(1) { animation-delay: 0.1s; }
+.animate-card:nth-child(2) { animation-delay: 0.2s; }
+.animate-card:nth-child(3) { animation-delay: 0.3s; }
+.animate-card:nth-child(4) { animation-delay: 0.4s; }
+.animate-card:nth-child(5) { animation-delay: 0.5s; }
 
 
 
@@ -615,83 +949,84 @@
 
 
 
-  /* About Section */
+
+
+
+
+
+
+
+
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .about {
-    background-color: var(--white);
+      padding: 1rem;
   }
   
-  .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+  
+  .grid-section{
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+  }
+  .dual-column {
+
+    grid-template-columns: 1fr;
+}
+  
+  .section-container1 {
+      padding: 0 1rem;
   }
   
-  .about-text, .about-experience {
-    background-color: var(--off-white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  .nosotros-section {
+      padding: 1.5rem;
   }
   
-  .about-text h3 {
-    color: var(--dark-blue);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  .timeline {
+      padding-left: 70px;
   }
   
-  .about-text h3 i {
-    color: var(--gold);
+  .timeline::before {
+      left: 35px;
   }
   
-  .mission, .vision, .values {
-    margin-bottom: 2rem;
+  .timeline-year {
+      left: -70px;
+      width: 60px;
+      height: 60px;
+      font-size: 1rem;
   }
   
-  .values ul {
-    list-style-position: inside;
-    margin-top: 0.5rem;
+  .peru-map {
+      width: 300px;
+      height: 375px;
   }
-  
-  .values li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-experience p {
-    margin-bottom: 1rem;
-  }
-  
-  .about-experience ul {
-    list-style-position: inside;
-    margin: 1rem 0;
-  }
-  
-  .about-experience li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .certifications h4 {
-    margin: 1.5rem 0 1rem;
-  }
-  
-  .cert-logos {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .cert-logos img {
-    height: 50px;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-  }
-  
-  .cert-logos img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-  }
+}
+
+
+
+
+
+
+
+
   
   /* Services Section */
   .services {
@@ -1383,7 +1718,6 @@
     
   }
 
-
   @media (max-width: 1024px) {
     .about-content,
     .support-content,
@@ -1397,6 +1731,9 @@
 
     .hero {
       min-height: 40vh; 
+    }
+    .grid-section {
+      margin-top: 8rem;
     }
 
     .hero1{
@@ -1413,6 +1750,7 @@
     .hero-ico img{
       display: none;
     }
+
 
     .unified-grid {
      display: flex;
@@ -1439,7 +1777,9 @@
 
   }
 
+
   
+ 
 
 
   @media (max-width: 768px) {

@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/IMAGENES/fondo-login.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    backdrop-filter: blur(2px);
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 30%;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+.login-container input {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: larger;
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-container input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(40, 142, 237, 0.6);
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #288EED, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, #00c6ff, #288EED);
+    transform: scale(1.03);
+}
+
+.error-message {
+    color: #ff4c4c;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .login-container {
+        width: 65%;
+        padding: 25px;
+    }
+}
+
+
+
+
+
+/* Estilos Base */
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.section-container {
+    padding: 0 2rem;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 600px;
+    color: white;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* Secciones generales */
+.nosotros-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosotros-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.nosotros-title {
+    color: #0077cc;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nosotros-title .icon {
+    font-size: 1.5rem;
+}
+
+.centered-title {
+    text-align: center;
+    justify-content: center;
+}
+
+.nosotros-content {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.centered-text {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout de secciones */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.dual-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Sección de Misión y Visión */
+.mission-vision {
+    text-align: center;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.mission-vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,119,204,0.1);
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #0077cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Sección de Valores */
+.valores-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.valor-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 3px solid #0077cc;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,119,204,0.1);
+}
+
+.valor-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0077cc;
+}
+
+.valor-card h3 {
+    margin-bottom: 0.8rem;
+    color: #0077cc;
+}
+
+.valor-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Línea de tiempo */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding-left: 100px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #0077cc, #00a1ff);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,119,204,0.3);
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 3px solid #0077cc;
+}
+
+.timeline-content h3 {
+    color: #0077cc;
+    margin-bottom: 0.5rem;
+}
+
+/* Acordeón */
+.accordion1 {
+    margin-top: 1.5rem;
+}
+
+.accordion1-item {
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.accordion1-button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    background-color: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.accordion1-button:hover {
+    background-color: #e9ecef;
+}
+
+.accordion1-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion1-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: white;
+}
+
+.accordion1-content p {
+    padding: 1rem 1.5rem;
+    margin: 0;
+}
+
+.accordion1-item.active .accordion1-icon {
+    transform: rotate(45deg);
+}
+
+/* Mapa de cobertura */
+.map-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.peru-map {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Peru_location_map.svg/500px-Peru_location_map.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2rem;
+}
+
+.city-marker {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #0077cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.city-marker:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.lima {
+    top: 65%;
+    left: 25%;
+    background-color: #0077cc;
+}
+
+.arequipa {
+    top: 80%;
+    left: 30%;
+    background-color: #00a1ff;
+}
+
+.cusco {
+    top: 75%;
+    left: 35%;
+    background-color: #0056b3;
+}
+
+.trujillo {
+    top: 55%;
+    left: 20%;
+    background-color: #003366;
+}
+
+.map-legend {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.lima-color { background-color: #0077cc; }
+.arequipa-color { background-color: #00a1ff; }
+.cusco-color { background-color: #0056b3; }
+.trujillo-color { background-color: #003366; }
+
+/* Imágenes */
+.section-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Animaciones */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-zoom {
+    transition: transform 0.3s ease;
+}
+
+.animate-zoom:hover {
+    transform: scale(1.05);
+}
+
+.animate-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-card:nth-child(1) { animation-delay: 0.1s; }
+.animate-card:nth-child(2) { animation-delay: 0.2s; }
+.animate-card:nth-child(3) { animation-delay: 0.3s; }
+.animate-card:nth-child(4) { animation-delay: 0.4s; }
+.animate-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about {
+        padding: 1rem;
+    }
+    
+    .hero-banner {
+        height: 350px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .grid-section, .dual-column {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-container {
+        padding: 0 1rem;
+    }
+    
+    .nosotros-section {
+        padding: 1.5rem;
+    }
+    
+    .timeline {
+        padding-left: 70px;
+    }
+    
+    .timeline::before {
+        left: 35px;
+    }
+    
+    .timeline-year {
+        left: -70px;
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .peru-map {
+        width: 300px;
+        height: 375px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
