@@ -24,6 +24,7 @@
     background-color: var(--off-white);
     overflow-x: hidden;
   }
+
   /* Header Styles */
   .main-header {
     background-color:black;
@@ -613,21 +614,95 @@
   
 /* About Section */
 .about {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 4%;
 }
 
+
+
 .main-about {
-  background-image: url('https://static.vecteezy.com/system/resources/previews/007/761/318/non_2x/telecommunication-tower-with-clear-blue-sky-background-antenna-on-blue-sky-background-radio-and-satellite-pole-communication-technology-free-photo.jpg');
-  background-attachment: fixed;
+  background-image: 
+  url('https://img.freepik.com/fotos-premium/cables-datos-brillantes-que-transmiten-informacion-4k-hd-fondo_1193781-6401.jpg?semt=ais_hybrid&w=740'),
+  url('https://img.freepik.com/fotos-premium/cables-fibra-optica-conectados-puerto-optico-centro-datos-primer-plano-cables-red-conectados-central-internet-profundidad-campo-poco-profunda-generada-ai_497837-3838.jpg?semt=ais_hybrid&w=740');
+background-size: 50% 100%, 50% 100%; 
+background-position: left, right; 
+background-repeat: no-repeat;
+background-attachment: fixed; 
+
+  
+}
+
+
+
+
+
+
+.hero-section-about {
+  padding-top: 20vh;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://cdn.pixabay.com/photo/2023/04/29/16/10/ai-generated-7958874_1280.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(1.1) contrast(1.1); 
+  background-repeat: no-repeat;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+
+  animation: pulseZoom 8s ease-in-out infinite;
 }
+
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+
+
+
+.hero-content-about {
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title-about {
+  font-size: 3.5rem;
+  margin-bottom: 0.3rem;
+  color: #ff6600;
+  font-weight: 700;
+  text-shadow: 9px 9px 9px rgb(0, 0, 0);
+  animation: pulse 2s infinite alternate;
+}
+
+.hero-subtitle-about {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  color: #ffffff;
+  text-shadow:
+    0 0 5px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(0, 0, 0, 0.4);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .section-container {
   padding: 0 2rem;
@@ -640,10 +715,12 @@
   margin-bottom: 4rem;
   padding: 2rem;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: rgb(0, 0, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 .nosotros-section:hover,
 .mission-vision:hover {
@@ -655,7 +732,7 @@
 .centered-title-map,
 .centered-title-about,
 .line-title {
-  color: #ffffff;
+  color: #0059ff;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   padding-bottom: 0.5rem;
@@ -669,7 +746,7 @@
 .nosotros-title .icon,
 .valor-icon {
   font-size: 1.5rem;
-  color: #ffc107;
+  color: #00FFF0; 
 }
 
 .nosotros-content{
@@ -690,14 +767,12 @@
 .icon-container {
   width: 60px;
   height: 60px;
-  background-color: #1ea8ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
   font-size: 1.8rem;
-  color: white;
 }
 
 /* Valores */
@@ -711,11 +786,10 @@
 .valor-card {
   padding: 2rem 1.5rem;
   border-radius: 10px;
-  background-color: rgba(30, 168, 255, 0.1);
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  background: rgba(0, 191, 255, 0.15); 
+  border: 1px solid #00BFFF;
   text-align: center;
   transition: all 0.3s ease;
-  border-top: 3px solid #ffffff;
 }
 
 .valor-card:hover {
@@ -740,15 +814,7 @@
   padding-left: 100px;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: rgb(165, 165, 165);
-}
+
 
 .timeline-item {
   position: relative;
@@ -761,8 +827,9 @@
   top: 0;
   width: 80px;
   height: 80px;
-  background-color: #89bfdf;
-  color: #000000;
+  background: rgba(0, 191, 255, 0.15); 
+  border: 1px solid #00BFFF;
+  color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -772,15 +839,16 @@
 }
 
 .timeline-content {
-  background-color: rgba(30, 168, 255, 0.1);
+  background: rgba(0, 191, 255, 0.15); 
+  border: 1px solid #00BFFF;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border-left: 3px solid #ffffff;
+
 }
 
 .timeline-content h3 {
-  color: rgb(255, 153, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
   border-bottom: 1px solid #ffffff;
@@ -858,11 +926,11 @@
 }
 
 .ciudad-card {
-  background: rgba(11, 26, 44, 0.75);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   padding: 1.8rem 1.5rem;
-  border-top: 4px solid #ffffff;
+  background: rgba(0, 191, 255, 0.15); 
+  border-top: 1px solid #00BFFF;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1028,7 +1096,7 @@
 
 
   
-  /* Services Section */
+  /* /* Services Section 
   .services {
     background-color: var(--off-white);
   }
@@ -1080,7 +1148,7 @@
     margin-bottom: 0.5rem;
   }
   
-  /* Products Section */
+  /* Products Section 
   .products {
     background-color: var(--white);
   }
@@ -1180,7 +1248,7 @@
     color: var(--white);
   }
   
-  /* Case Studies Section */
+  /* Case Studies Section 
   .case-studies {
     background-color: var(--off-white);
   }
@@ -1281,131 +1349,184 @@
   .sector span {
     font-size: 0.9rem;
   }
-  
-  /* Support Section */
-  .support {
-    background-color: var(--white);
-  }
-  
-  .support-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-  
-  .faq, .support-resources {
-    background-color: var(--off-white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-  
-  .faq h3, .support-resources h3 {
-    color: var(--dark-blue);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .faq h3 i, .support-resources h3 i {
-    color: var(--gold);
-  }
-  
-  .accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .accordion-item {
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .accordion-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--white);
-    border: none;
-    text-align: left;
-    font-weight: 500;
-    color: var(--dark-blue);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .accordion-btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .accordion-btn i {
-    transition: transform 0.3s ease;
-  }
-  
-  .accordion-btn.active {
-    background-color: var(--dark-blue);
-    color: var(--white);
-  }
-  
-  .accordion-btn.active i {
-    transform: rotate(180deg);
-  }
-  
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: var(--white);
-  }
-  
-  .accordion-content p {
-    padding: 0 1rem 1rem;
-    color: var(--gray);
-  }
-  
-  .support-resources ul {
-    list-style: none;
-  }
-  
-  .support-resources li {
-    margin-bottom: 1rem;
-  }
-  
-  .support-resources a {
-    color: var(--dark-blue);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .support-resources a:hover {
-    color: var(--gold);
-  }
-  
-  .support-resources a i {
-    font-size: 1.2rem;
-  }
-  
-  .support-contact {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ddd;
-  }
-  
-  .support-contact p {
-    margin-bottom: 1rem;
-  }
-  
-  .support-contact .btn {
-    margin-right: 0.5rem;
-  }
+  */
+
+
+
+
+
+ /* Soporte */
+ .support {
+  background-color: #041424;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.418) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.39) 1px, transparent 1px);
+  background-size: 10px 10px;
+  background-blend-mode: overlay;
+  animation: moveGrid 20s linear infinite;
+  padding: 4rem 2rem;
+  color: #ffffff;
+}
+
+@keyframes moveGrid {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}
+
+.title-support{
+  color: #00bfff;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* Contenido general */
+.support-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Secciones internas */
+.faq,
+.support-resources {
+  background-color: #0a0a0a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Títulos con ícono */
+.faq h3,
+.support-resources h3 {
+  color: #00bfff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq h3 i,
+.support-resources h3 i {
+  color: #ffd700;
+  font-size: 1.3rem;
+}
+
+/* Acordeón */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-btn {
+  background-color: #111;
+  color: #00bfff;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.accordion-btn:hover {
+  background-color: #1a1a1a;
+  transform: translateX(5px);
+}
+
+.accordion-btn.active {
+  background-color: #00bfff;
+  color: #fff;
+}
+
+.accordion-btn i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  padding: 0 1rem;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Recursos */
+.support-resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.support-resources li {
+  margin-bottom: 1rem;
+}
+
+.support-resources a {
+  color: #00bfff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.support-resources a:hover {
+  color: #ffd700;
+  transform: translateX(6px);
+}
+
+/* Íconos */
+.support-resources a i {
+  font-size: 1.2rem;
+}
+
+
+.support-contact {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #444; /* Sutil borde para el contacto */
+}
+
+.support-contact p {
+  margin-bottom: 1rem;
+}
+
+.support-contact .btn {
+  margin-right: 0.5rem;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
   
   /* Contact Section */
   .contact {
@@ -1414,7 +1535,6 @@
     background-size: cover;
     background-position: center;
     position: relative;
-
     background-attachment: fixed; /* Esto hace que el fondo se quede fijo mientras se hace scroll */
   }
   
@@ -1706,6 +1826,8 @@
       padding: 2rem;
       transition: left 0.3s ease;
     }
+
+ 
     
     .main-nav.active {
       left: 0;
@@ -1895,3 +2017,61 @@
       padding-right: 10rem;
     }
   }
+
+
+  /* SErvices*/
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  
+  .section-title-about {
+    font-size: 2rem;
+
+  }
+  
+  .hero-title-about {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle-about {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-about {
+    padding-top: 13vh; /* Ajuste para header en móvil */
+    min-height: 50vh;
+  }
+  .title-contact {
+    margin-top: 5rem;
+  }
+  .main-about {
+    background-image: 
+    url('https://img.freepik.com/fotos-premium/cables-datos-brillantes-que-transmiten-informacion-4k-hd-fondo_1193781-6401.jpg?semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  
+    
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero-title-about {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle-about {
+    font-size: 1.1rem;
+  }
+  
+  .section-title-about {
+    font-size: 1.75rem;
+  }
+  
+
+}

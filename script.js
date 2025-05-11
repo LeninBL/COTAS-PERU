@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    // Tabs de productos
+   /*  // Tabs de productos
     const tabBtns = document.querySelectorAll('.tab-btn');
     const productsGrid = document.querySelector('.products-grid');
     
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         productsGrid.appendChild(productCard);
       });
     }
-    
+     
     // Eventos para los tabs
     tabBtns.forEach(btn => {
       btn.addEventListener('click', function() {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cargar productos iniciales
     loadProducts('switches');
     
-
+*/
     
     
     // Formulario de contacto
@@ -220,9 +220,28 @@ document.querySelectorAll('.animate-card').forEach(card => {
 
 const heroObserver = new IntersectionObserver(entries => {
   if (entries[0].isIntersecting) {
-    setInterval(cambiarFondo, 2500);
+    setInterval(cambiarFondo, 1500);
     heroObserver.disconnect();
   }
 });
 
 heroObserver.observe(heroSection);
+
+
+/*
+
+  function navigateToSection(select) {
+    const value = select.value;
+    if (!value) return;
+
+    if (value.startsWith('#')) {
+      const target = document.querySelector(value);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = value;
+    }
+  }
+
+  */
