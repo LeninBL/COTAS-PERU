@@ -218,7 +218,7 @@
   
   .hero-bg1 {
     background-image:
-      url('/static/assets/IMAGENES/Redes_y_telecomunicaciones_datascientest.webp');
+      url('/IMAGENES/Redes_y_telecomunicaciones_datascientest.jpg');
     opacity: 1;
   }
   
@@ -1530,7 +1530,7 @@ background-attachment: fixed;
   
   /* Contact Section */
   .contact {
-    background-image: url('/static/assets/IMAGENES/photo-1526666923127-b2970f64b422.webp');
+    background-image: url('/IMAGENES/photo-1526666923127-b2970f64b422.jfif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

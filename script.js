@@ -49,6 +49,75 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /*  // Tabs de productos
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const productsGrid = document.querySelector('.products-grid');
+    
+    // Datos de productos (simulados)
+    const productsData = {
+      switches: [
+        { name: 'Switch Cisco 2960', desc: '24 puertos Gigabit Ethernet', price: '$1,200' },
+        { name: 'Switch HP 1820', desc: '8 puertos Gigabit', price: '$350' },
+        { name: 'Switch Ubiquiti USW', desc: '16 puertos PoE', price: '$899' }
+      ],
+      routers: [
+        { name: 'Router Cisco ISR', desc: 'Para empresas medianas', price: '$2,500' },
+        { name: 'Router MikroTik', desc: 'Potente y económico', price: '$199' }
+      ],
+      wifi: [
+        { name: 'AP Ubiquiti UAP', desc: 'Wi-Fi 6, alta densidad', price: '$179' },
+        { name: 'AP Cisco 2802', desc: 'Empresarial, doble banda', price: '$699' }
+      ],
+      cableado: [
+        { name: 'Cable UTP Cat6', desc: 'Caja 305m', price: '$150' },
+        { name: 'Fibra óptica', desc: 'Multimodo 50/125', price: '$0.80/m' }
+      ],
+      herramientas: [
+        { name: 'Probador de red', desc: 'Fluke básico', price: '$299' },
+        { name: 'Crimpadora RJ45', desc: 'Profesional', price: '$49' }
+      ]
+    };
+    
+    // Función para cargar productos
+    function loadProducts(category) {
+      productsGrid.innerHTML = '';
+      const products = productsData[category];
+      
+      products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+          <div class="product-image">
+            <i class="bi bi-hdd-network"></i>
+          </div>
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>${product.desc}</p>
+            <span class="product-price">${product.price}</span>
+            <a href="#contacto" class="product-btn">Cotizar</a>
+          </div>
+        `;
+        productsGrid.appendChild(productCard);
+      });
+    }
+     
+    // Eventos para los tabs
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remover clase active de todos los botones
+        tabBtns.forEach(b => b.classList.remove('active'));
+        // Agregar clase active al botón clickeado
+        this.classList.add('active');
+        // Cargar productos correspondientes
+        loadProducts(this.dataset.category);
+      });
+    });
+    
+    // Cargar productos iniciales
+    loadProducts('switches');
+    
+*/
+
   // Formulario de contacto
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
@@ -63,11 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const images = [
-  "/static/assets/IMAGENES/datacenter.webp",
-  "/static/assets/IMAGENES/photo-1446776653964-20c1d3a81b06.avif",
-  "/static/assets/IMAGENES/pngtree-telecom-tower-close(3).webp",
-  "/static/assets/IMAGENES/photo-1528499908559-b8e4e8b89bda.avif",
-  "/static/assets/IMAGENES/desktop-wallpaper-telecomunications-radar.webp",
+  "/IMAGENES/desktop-wallpaper-telecomunications-radar.jpg",
+  "/IMAGENES/datacenter.jpg",
+  "/IMAGENES/photo-1446776653964-20c1d3a81b06.avif",
+  "/IMAGENES/photo-1528499908559-b8e4e8b89bda.avif",
+  "/IMAGENES/pngtree-telecom-tower-close(3).jpg",
 ];
 
 let index = 1;
@@ -141,3 +210,21 @@ const heroObserver = new IntersectionObserver((entries) => {
 });
 
 heroObserver.observe(heroSection);
+
+/*
+
+  function navigateToSection(select) {
+    const value = select.value;
+    if (!value) return;
+
+    if (value.startsWith('#')) {
+      const target = document.querySelector(value);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = value;
+    }
+  }
+
+  */
