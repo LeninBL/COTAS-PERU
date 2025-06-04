@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Entradas</title>
+    <link rel="stylesheet" href="/static/css/style_welcome.css">
+    <link rel="stylesheet" href="/static/css/style_movimientos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar">
+        <nav class="navbar">
+            <span class="nav-item">
+                <i class="fas fa-user"></i> {{ username }}
+            </span>
+            <a href="/productos-ui" class="nav-item">Gestión de Productos</a>
+            <a href="/entradas-ui" class="nav-item">Registro de Entradas</a>
+            <a href="/salidas-ui" class="nav-item active">Registro de Salidas</a>
+            <a href="/users/me/profile" class="nav-item">Información Personal</a>
+            <a href="/users/me/show" class="nav-item">Mostrar Usuarios</a>
+            <a href="/users/me/register_show" class="nav-item">Registrar Nuevo Usuario</a>
+            <form id="logout" class="logout">
+                <button class="button_logout" type="submit">Cerrar sesión</button>
+            </form>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <div class="welcome-container">
+            <h2>Registro de Entradas</h2>
+            
+            <div class="movimiento-form">
+                <h3>Nueva Entrada</h3>
+                <form id="entradaForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="codigo_entrada">Código del Producto*</label>
+                            <input type="text" id="codigo_entrada" required>
+                            <button type="button" id="buscarProductoEntrada">Buscar</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_entrada">Fecha</label>
+                            <input type="date" id="fecha_entrada" value="{{ now.strftime('%Y-%m-%d') }}">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cantidad_nueva_entrada">Cantidad Nueva</label>
+                            <input type="number" id="cantidad_nueva_entrada" min="0" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad_usada_entrada">Cantidad Usada</label>
+                            <input type="number" id="cantidad_usada_entrada" min="0" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad_danada_entrada">Cantidad Dañada</label>
+                            <input type="number" id="cantidad_danada_entrada" min="0" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="responsable_entrada">Responsable*</label>
+                            <input type="text" id="responsable_entrada" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="observaciones_entrada">Observaciones</label>
+                        <textarea id="observaciones_entrada" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancelarEntrada" class="btn-secondary">Cancelar</button>
+                        <button type="submit" id="registrarEntrada" class="btn-primary">Registrar Entrada</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="historial-movimientos">
+                <h3>Historial de Entradas</h3>
+                <div class="filtros-movimientos">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha_filtro_entrada">Fecha:</label>
+                            <input type="date" id="fecha_filtro_entrada">
+                        </div>
+                        <div class="form-group">
+                            <label for="codigo_filtro_entrada">Código:</label>
+                            <input type="text" id="codigo_filtro_entrada" placeholder="Buscar por código...">
+                        </div>
+                        <div class="form-group">
+                            <label for="responsable_filtro_entrada">Responsable:</label>
+                            <input type="text" id="responsable_filtro_entrada">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" id="aplicarFiltrosEntrada" class="btn-primary">Aplicar Filtros</button>
+                        <button type="button" id="limpiarFiltrosEntrada" class="btn-secondary">Limpiar</button>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="entradasTable" class="movimientos-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Código</th>
+                                <th>Tipo</th>
+                                <th>Cantidad</th>
+                                <th>Estado</th>
+                                <th>Responsable</th>
+                                <th>Registrado por</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Datos se cargarán dinámicamente -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button id="prevPageEntradas" disabled>Anterior</button>
+                        <span id="pageInfoEntradas">Página 1 de 1</span>
+                        <button id="nextPageEntradas" disabled>Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/static/js/script_welcome.js"></script>
+    <script src="/static/js/movimientos.js"></script>
+</body>
+</html>

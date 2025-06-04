@@ -1,0 +1,139 @@
+/* Estilos para formularios de movimientos */
+.movimiento-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.movimiento-form h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.movimiento-form .form-group {
+    margin-bottom: 15px;
+}
+
+.movimiento-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.movimiento-form .form-group input,
+.movimiento-form .form-group select,
+.movimiento-form .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.movimiento-form .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.movimiento-form .form-row .form-group {
+    flex: 1;
+}
+
+.movimiento-form .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.movimiento-form button[type="button"] {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para tablas de movimientos */
+.movimientos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.movimientos-table th,
+.movimientos-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.movimientos-table th {
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.movimientos-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Filtros */
+.filtros-movimientos {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filtros-movimientos .form-row {
+    margin-bottom: 10px;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .movimiento-form .form-row {
+        flex-direction: column;
+    }
+    
+    .movimiento-form .form-row .form-group {
+        width: 100%;
+    }
+    
+    .movimientos-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .filtros-movimientos .form-row {
+        flex-direction: column;
+    }
+}
